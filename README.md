@@ -16,9 +16,6 @@ The default version exposed by package.json is the unminified bundle. Since I ex
 
 
 ```bash
-# install latest master
-npm install jeffbski/joi-browser
-
-# OR using a specific tag
-npm install jeffbski/joi-browser#v7.0.1
+# builds dist/bundle.js and dist/bundle.min.js
+npm install
 ```
