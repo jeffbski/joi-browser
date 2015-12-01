@@ -19,3 +19,25 @@ The default version exposed by package.json is the unminified bundle. Since I ex
 # builds dist/bundle.js and dist/bundle.min.js
 npm install
 ```
+
+## Discussion
+
+The main discussion about these difficulties has been in this github issue.
+
+https://github.com/hapijs/joi/issues/528#issuecomment-128532221
+
+As for the bundling size issues that were summarized in the issue, the package size can be reduced by eliminating unnecessary code.
+
+crypto is the first thing that can be safely eliminated since this functionaility in Joi would not be used by the browser. That is the biggest win dropping things to ~45KB gzipped without sacrificing any actual functionality.
+
+If your use case doesn't require moment, isemail, and buffer, you can stub those packages out and get a bundle in the neighborhood of ~23KB gzipped.
+
+I have chosen to make the default bundle only exclude crypto so that it would remain fully compatible, but you could fork this and create a smaller version by excluding things you don't need.
+
+| Config | Joi and dependencies gzipped |
+|----------|------------------------------------------|
+| Full Joi | 126KB |
+| w/o crypto (in Hoek) | 44KB |
+| w/o crypto (in Hoek), moment | 31KB |
+| w/o crypto (in Hoek), moment, isemail | 29KB |
+| w/o crypto (in Hoek), moment, isemail, buffer | 23KB |
