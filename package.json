@@ -1,13 +1,13 @@
 {
   "name": "joi-browser",
   "version": "1.0.0",
-  "description": "",
+  "description": "joi validation bundled for the browser",
   "main": "./dist/bundle.js",
   "scripts": {
     "prepublish": "npm run build-webpack",
     "build-webpack": "webpack && uglifyjs dist/bundle.js -c warnings=false -m | ntee dist/bundle.min.js | ngzip > dist/bundle.min.js.gz"
   },
-  "author": "",
+  "author": "Jeff Barczewski",
   "license": "MIT",
   "babel": {
     "plugins": [
