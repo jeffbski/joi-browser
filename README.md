@@ -1,6 +1,6 @@
 # joi-browser
 
-joi validation bundled for the browser
+joi validation bundled for the browser (babelified and bundled)
 
 ## Why?
 
@@ -10,7 +10,7 @@ The community is trying to rally to get the Joi package itself setup so that we 
 
 This package can be used included in other builds (browserify or webpack) or used on its own.
 
-The default version exposed by package.json is the unminified bundle. Since I expected to primarily be using this inside of another bundle. However the minified version is also built on install as dist/bundle.min.js.
+The default version exposed by package.json is the babelified unminified bundle. It has been transpiled to ES5. Since I expected to primarily be using this inside of another bundle. However the minified version is also built on install as dist/bundle.min.js.
 
 ## Usage
 
