@@ -9,7 +9,7 @@ module.exports = {
     libraryTarget: 'umd',
     umdNamedDefine: true,
     path: __dirname + '/dist',
-    filename: 'webpack-bundle.js'
+    filename: 'bundle.js'
   },
   module: {
     loaders: [
