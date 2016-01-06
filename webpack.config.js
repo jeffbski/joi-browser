@@ -9,7 +9,7 @@ module.exports = {
     libraryTarget: 'umd',
     umdNamedDefine: true,
     path: __dirname + '/dist',
-    filename: 'bundle.js'
+    filename: 'joi-browser.js'
   },
   module: {
     loaders: [

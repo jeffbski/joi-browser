@@ -2,10 +2,10 @@
   "name": "joi-browser",
   "version": "7.0.1",
   "description": "joi validation bundled for the browser",
-  "main": "./dist/bundle.js",
+  "main": "./dist/joi-browser.js",
   "scripts": {
     "prepublish": "npm run build-webpack",
-    "build-webpack": "webpack && uglifyjs dist/bundle.js -c warnings=false -m | ntee dist/bundle.min.js | ngzip > dist/bundle.min.js.gz"
+    "build-webpack": "webpack && uglifyjs dist/joi-browser.js -c warnings=false -m | ntee dist/joi-browser.min.js | ngzip > dist/joi-browser.min.js.gz"
   },
   "author": "Jeff Barczewski",
   "license": "MIT",
