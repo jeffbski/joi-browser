@@ -15,13 +15,13 @@ The default version exposed by package.json is the babelified unminified bundle.
 ## Usage
 
 ```bash
-# builds dist/bundle.js and dist/bundle.min.js
+# builds dist/joi-browser.js and dist/joi-browser.min.js
 npm install
 ```
 
-Note: if you want to use Joi's date validation capabilities, you will also need to install or externally import `moment` since it has been excluded from the build.
+Note: Moment has been excluded from the build, so you will want to include it into your project as `moment` to use `joi-browser`. This allows you to use your existing instance of moment rather than duplicating and allows you freedom to install locales and possibly even exclude moment with a shim if you don't use joi date validation features.
 
-Moment's locale feature can result in a large bundle, so you can reduce the size of moment by excluding that with a webpack config containing something like:
+FYI: Moment's locale feature can result in a large bundle, so you can reduce the size of moment by excluding that with a webpack config containing something like:
 
 ```javascript
   plugins: [
