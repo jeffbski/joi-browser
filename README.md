@@ -30,6 +30,7 @@ FYI: Moment's locale feature can result in a large bundle, so you can reduce the
   ],
 ```
 
+Resulting size of joi-browser.min.js gzipped is 32KB.
 
 ## Discussion
 
