@@ -33,5 +33,8 @@ module.exports = {
   plugins: [
     // english locale is included, exclude the rest
     new webpack.IgnorePlugin(/locale/, /moment$/)
-  ]
+  ],
+  externals: {
+    "moment": "moment"
+  }
 };
