@@ -32,6 +32,10 @@ FYI: Moment's locale feature can result in a large bundle, so you can reduce the
 
 Resulting size of joi-browser.min.js gzipped is 32KB.
 
+## Upgrade notes
+
+ - 7.1.0 - excludes moment from the joi-browser bundle, so it must be imported into your project from elsewhere.
+
 ## Discussion
 
 The main discussion about these difficulties has been in this github issue.
