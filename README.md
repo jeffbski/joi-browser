@@ -34,7 +34,7 @@ Resulting size of joi-browser.min.js gzipped is 32KB.
 
 ## Upgrade notes
 
- - 7.1.0 - excludes moment from the joi-browser bundle, so it must be imported into your project from elsewhere.
+ - 7.1.0 - excludes `moment` from the `joi-browser` bundle, so it must be imported into your project from elsewhere. Bundle was renamed to `dist/joi-browser.js` and `dist/joi-browser.min.js`
 
 ## Discussion
 
