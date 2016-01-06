@@ -29,5 +29,8 @@
   },
   "dependencies": {
     "joi": "^7.1.0"
+  },
+  "peerDependencies": {
+    "moment": "2.x.x"
   }
 }
