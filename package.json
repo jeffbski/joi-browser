@@ -1,6 +1,6 @@
 {
   "name": "joi-browser",
-  "version": "7.0.1",
+  "version": "7.1.0",
   "description": "joi validation bundled for the browser",
   "main": "./dist/joi-browser.js",
   "scripts": {
