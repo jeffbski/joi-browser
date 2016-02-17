@@ -1,7 +1,7 @@
 {
   "name": "joi-browser",
-  "version": "7.1.0",
-  "description": "joi validation bundled for the browser",
+  "version": "8.0.1",
+  "description": "joi object schema validation bundled for the browser",
   "main": "./dist/joi-browser.js",
   "scripts": {
     "prepublish": "npm run build-webpack",
@@ -17,18 +17,25 @@
       "es2015"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/jeffbski/joi-browser.git"
+  },
+  "bugs": {
+    "url": "http://github.com/jeffbski/joi-browser/issues"
+  },
   "devDependencies": {
     "babel-core": "^6.2.1",
     "babel-loader": "^6.2.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.2.0",
     "babel-preset-es2015": "^6.1.18",
+    "joi": "8.0.1",
     "ngzip": "^1.1.3",
     "ntee": "^1.1.4",
     "uglify-js": "^2.6.1",
     "webpack": "^1.12.9"
   },
   "dependencies": {
-    "joi": "^7.1.0"
   },
   "peerDependencies": {
     "moment": "2.x.x"
