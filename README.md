@@ -1,6 +1,6 @@
 # joi-browser
 
-joi validation bundled for the browser (babelified and bundled)
+joi object schema validation bundled for the browser (babelified and bundled)
 
 ## Why?
 
@@ -13,6 +13,86 @@ This package can be used included in other builds (browserify or webpack) or use
 The default version exposed by package.json is the babelified unminified bundle. It has been transpiled to ES5. Since I expected to primarily be using this inside of another bundle. However the minified version is also built on install as dist/bundle.min.js.
 
 ## Usage
+
+
+```bash
+npm install moment # peer dependency used by joi-browser
+npm install joi-browser
+```
+
+```javascript
+var Joi = require('joi-browser');
+```
+
+Note: if you are using webpack with a babel loader you may need to exclude `joi-browser` from being run through babel again.
+
+In your webpack.config.js loaders, add an `exclude: [ /joi-browser/ ]`
+
+
+### Isomorphic / Universal JS - using in browser and on server (Node.js)
+
+If you want to use `joi` with Node.js and `joi-browser` for browser use then you can follow one of these recipies.
+
+#### Browserify
+
+```bash
+npm install moment # peer dependency used by joi-browser
+npm install joi-browser
+npm install joi
+```
+
+Add the following to your app's package.json which will tell browserify to use joi-browser instead of joi when bundling for the browser.
+
+```json
+  "browser": {
+    "joi": "joi-browser"
+  },
+```
+
+So in your code, you just require `joi` and browserify will automatically switch it with joi-browser when it bundles.
+
+```javascript
+var Joi = require('joi');
+```
+
+#### Webpack
+
+```bash
+npm install moment # peer dependency used by joi-browser
+npm install joi-browser
+npm install joi
+```
+
+Add the following to your app's package.json which will tell webpack to use joi-browser instead of joi when bundling for the browser.
+
+```json
+  "browser": {
+    "joi": "joi-browser"
+  },
+```
+
+Add the following to your app's webpack.config.js to enable the package aliasing we configured in package.json
+
+```javascript
+  resolve: {
+    packageAlias: 'browser'
+  }
+```
+
+Note: if you are using webpack with a babel loader you may need to exclude `joi-browser` from being run through babel again.
+
+In your webpack.config.js loaders, add an `exclude: [ /joi-browser/ ]`.
+
+
+
+So in your code, you just require `joi` and webpack will automatically switch it with joi-browser when it bundles.
+
+```javascript
+var Joi = require('joi');
+```
+
+
+## Development
 
 ```bash
 # builds dist/joi-browser.js and dist/joi-browser.min.js
