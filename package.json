@@ -29,7 +29,7 @@
     "babel-loader": "^6.2.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.2.0",
     "babel-preset-es2015": "^6.1.18",
-    "joi": "8.0.1",
+    "joi": "8.0.5",
     "ngzip": "^1.1.3",
     "ntee": "^1.1.4",
     "uglify-js": "^2.6.1",
