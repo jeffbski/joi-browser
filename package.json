@@ -1,6 +1,6 @@
 {
   "name": "joi-browser",
-  "version": "8.0.1",
+  "version": "8.0.5",
   "description": "joi object schema validation bundled for the browser",
   "main": "./dist/joi-browser.js",
   "scripts": {
@@ -35,8 +35,7 @@
     "uglify-js": "^2.6.1",
     "webpack": "^1.12.9"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "peerDependencies": {
     "moment": "2.x.x"
   }
