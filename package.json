@@ -1,6 +1,6 @@
 {
   "name": "joi-browser",
-  "version": "8.4.0",
+  "version": "9.0.0",
   "description": "joi object schema validation bundled for the browser",
   "main": "./dist/joi-browser.js",
   "scripts": {
