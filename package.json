@@ -43,7 +43,7 @@
     "babel-plugin-transform-proto-to-assign": "^6.9.0",
     "babel-plugin-transform-es2015-classes": "^6.14.0",
     "babel-preset-es2015": "^6.1.18",
-    "joi": "9.0.4",
+    "joi": "9.1.0",
     "ngzip": "^1.1.3",
     "ntee": "^1.1.4",
     "uglify-js": "^2.6.1",
