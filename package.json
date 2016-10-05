@@ -1,6 +1,6 @@
 {
   "name": "joi-browser",
-  "version": "9.0.4",
+  "version": "9.0.5",
   "description": "joi object schema validation bundled for the browser",
   "main": "./dist/joi-browser.js",
   "scripts": {
@@ -17,7 +17,12 @@
       "transform-es2015-modules-commonjs",
       "transform-object-assign",
       "transform-proto-to-assign",
-      ["transform-es2015-classes", {"loose": true}]
+      [
+        "transform-es2015-classes",
+        {
+          "loose": true
+        }
+      ]
     ],
     "presets": [
       "es2015"
