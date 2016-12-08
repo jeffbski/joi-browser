@@ -16,7 +16,6 @@ The default version exposed by package.json is the babelified unminified bundle.
 
 
 ```bash
-npm install moment # peer dependency used by joi-browser
 npm install joi-browser
 ```
 
@@ -36,7 +35,6 @@ If you want to use `joi` with Node.js and `joi-browser` for browser use then you
 #### Browserify
 
 ```bash
-npm install moment # peer dependency used by joi-browser
 npm install joi-browser
 npm install joi
 ```
@@ -58,7 +56,6 @@ var Joi = require('joi');
 #### Webpack
 
 ```bash
-npm install moment # peer dependency used by joi-browser
 npm install joi-browser
 npm install joi
 ```
@@ -97,22 +94,15 @@ var Joi = require('joi');
 ```bash
 # builds dist/joi-browser.js and dist/joi-browser.min.js
 npm install
+npm run prepublish # when you want to rebuild
 ```
 
-Note: Moment has been excluded from the build, so you will want to include it into your project as `moment` to use `joi-browser`. This allows you to use your existing instance of moment rather than duplicating and allows you freedom to install locales and possibly even exclude moment with a shim if you don't use joi date validation features.
-
-FYI: Moment's locale feature can result in a large bundle, so you can reduce the size of moment by excluding that with a webpack config containing something like:
-
-```javascript
-  plugins: [
-    // english locale is included, exclude the rest
-    new webpack.IgnorePlugin(/locale/, /moment$/)
-  ],
-```
-
-Resulting size of joi-browser.min.js gzipped is 32KB.
 
 ## Upgrade notes
+
+See the [github releases for notes](https://github.com/jeffbski/joi-browser/releases). A few notable upgrades are:
+
+ - 10.0.5 - Joi split momentjs date format functionality into `joi-date-extensions`. The equivalent version for the browser is `joi-date-extensions-browser`. If you install it you will need to also install its peer dependency momentjs. See [joi-date-extensions-browser repo](https://github.com/jeffbski/joi-date-extensions-browser)
 
  - 7.1.0 - excludes `moment` from the `joi-browser` bundle, so it must be imported into your project from elsewhere. Bundle was renamed to `dist/joi-browser.js` and `dist/joi-browser.min.js`
 

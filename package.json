@@ -1,6 +1,6 @@
 {
   "name": "joi-browser",
-  "version": "9.1.0",
+  "version": "10.0.0-beta1",
   "description": "joi object schema validation bundled for the browser",
   "main": "./dist/joi-browser.js",
   "scripts": {
@@ -38,19 +38,17 @@
   "devDependencies": {
     "babel-core": "^6.2.1",
     "babel-loader": "^6.2.0",
+    "babel-plugin-transform-es2015-classes": "^6.14.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.2.0",
     "babel-plugin-transform-object-assign": "^6.8.0",
     "babel-plugin-transform-proto-to-assign": "^6.9.0",
-    "babel-plugin-transform-es2015-classes": "^6.14.0",
     "babel-preset-es2015": "^6.1.18",
-    "joi": "9.1.0",
+    "joi": "10.0.5",
+    "json-loader": "^0.5.4",
     "ngzip": "^1.1.3",
     "ntee": "^1.1.4",
     "uglify-js": "^2.6.1",
     "webpack": "^1.12.9"
   },
-  "dependencies": {},
-  "peerDependencies": {
-    "moment": "2.x.x"
-  }
+  "dependencies": {}
 }
