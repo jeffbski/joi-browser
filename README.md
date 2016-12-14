@@ -102,7 +102,7 @@ npm run prepublish # when you want to rebuild
 
 See the [github releases for notes](https://github.com/jeffbski/joi-browser/releases). A few notable upgrades are:
 
- - 10.0.5 - Joi split momentjs date format functionality into `joi-date-extensions`. The equivalent version for the browser is `joi-date-extensions-browser`. If you install it you will need to also install its peer dependency momentjs. See [joi-date-extensions-browser repo](https://github.com/jeffbski/joi-date-extensions-browser)
+ - 10.0.5 - Joi split momentjs date format functionality into `joi-date-extensions`. The equivalent version for the browser is [joi-date-extensions-browser](https://github.com/jeffbski/joi-date-extensions-browser), but it is currently broken. You can instead use [joi-full](https://github.com/jeffbski/joi-full) which includes the extension and is a universal/isomorphic package that will work in either Node.js or bundled with webpack/browserify. If you install it you will need to also install its peer dependency momentjs. See
 
  - 7.1.0 - excludes `moment` from the `joi-browser` bundle, so it must be imported into your project from elsewhere. Bundle was renamed to `dist/joi-browser.js` and `dist/joi-browser.min.js`
 
