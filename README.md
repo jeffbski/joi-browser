@@ -2,6 +2,8 @@
 
 joi object schema validation bundled for the browser (babelified and bundled)
 
+[![NPM Version Badge](https://img.shields.io/npm/v/joi-browser.svg)](https://www.npmjs.com/package/joi-browser)
+
 ## Why?
 
 There has been some difficulty in getting a reasonable version of Joi packaged for the browser both due to the size of bundling and now with 7.x.x the switch to ES6 modules has added additional challenges.
