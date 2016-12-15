@@ -55,6 +55,8 @@ So in your code, you just require `joi` and browserify will automatically switch
 var Joi = require('joi');
 ```
 
+See `examples/browserify-basic`
+
 #### Webpack
 
 ```bash
@@ -90,6 +92,8 @@ So in your code, you just require `joi` and webpack will automatically switch it
 var Joi = require('joi');
 ```
 
+See `examples/webpack-basic`
+
 ## joi-full
 
 joi@10 moved some date validation logic into an extension `joi-date-extensions` so I built the equivalent [joi-date-extensions-browser](https://github.com/jeffbski/joi-date-extensions-browser) but there are currently issues with the build when trying to integrate `joi-browser` and `joi-date-extensions-browser`.
@@ -105,6 +109,12 @@ npm install
 npm run prepublish # when you want to rebuild
 ```
 
+### Examples
+
+I have included a few examples of demonstrating how to use with webpack and browserify
+
+ - `examples/browserify-basic`
+ - `examples/webpack-basic`
 
 ## Upgrade notes
 

@@ -1,0 +1,49 @@
+{
+  "name": "browserify-basic",
+  "private": true,
+  "version": "0.0.1",
+  "browser": {
+    "joi": "joi-browser"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "clean": "mkdirp dist && rimraf dist/*",
+    "build": "browserify src/index.js -d -o dist/main.js -v",
+    "prebuild": "npm run clean",
+    "postbuild": "echo \"Finished\"",
+    "prepublish": "npm run prod-build",
+    "prewatch": "npm run clean",
+    "prod-build": "npm run build --production",
+    "start": "npm run watch",
+    "watch": "run-p watch:*",
+    "watch:browserify": "watchify src/index.js -d -o dist/main.js",
+    "watch:browsersync": "wait-on dist/main.js && browser-sync start --config bs-config.js"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.14.0",
+    "browserify": "^13.1.1",
+    "json-loader": "^0.5.4",
+    "mkdirp": "^0.5.1",
+    "npm-run-all": "^3.1.2",
+    "rimraf": "^2.5.4",
+    "wait-on": "^2.0.1",
+    "watchify": "^3.8.0",
+    "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "joi-browser": "^10.0.6"
+  }
+}
