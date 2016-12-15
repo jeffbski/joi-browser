@@ -64,23 +64,16 @@ npm install joi-browser
 npm install joi
 ```
 
-Add the following to your app's package.json which will tell webpack to use joi-browser instead of joi when bundling for the browser.
-
-```json
-  "browser": {
-    "joi": "joi-browser"
-  },
-```
-
-Add the following to your app's webpack.config.js to enable the package aliasing we configured in package.json
+Add the following to your app's webpack.config.js to alias joi to joi-browser
 
 ```javascript
   resolve: {
-    packageAlias: 'browser'
+    alias: {
+      joi: 'joi-browser'
   }
 ```
 
-Note: if you are using webpack with a babel loader you may need to exclude `joi-browser` from being run through babel again.
+Note: if you are using webpack with a babel loader you may need to exclude `joi-browser` (or node_modules) from being run through babel again.
 
 In your webpack.config.js loaders, add an `exclude: [ /joi-browser/ ]`.
 
