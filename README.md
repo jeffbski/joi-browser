@@ -2,7 +2,7 @@
 
 joi object schema validation bundled for the browser (babelified and bundled)
 
-[![NPM Version Badge](https://img.shields.io/npm/v/joi-browser.svg)](https://www.npmjs.com/package/joi-browser)
+[![Build Status](https://secure.travis-ci.org/jeffbski/joi-browser.png?branch=master)](http://travis-ci.org/jeffbski/joi-browser) [![NPM Version Badge](https://img.shields.io/npm/v/joi-browser.svg)](https://www.npmjs.com/package/joi-browser)
 
 ## Why?
 
