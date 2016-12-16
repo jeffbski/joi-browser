@@ -6,7 +6,7 @@ joi object schema validation bundled for the browser (babelified and bundled)
 
 ## Why?
 
-There has been some difficulty in getting a reasonable version of Joi packaged for the browser both due to the size of bundling and now with 7.x.x the switch to ES6 modules has added additional challenges.
+There has been some difficulty in getting a reasonable version of [Joi](https://github.com/hapijs/joi) packaged for the browser both due to the size of bundling and now with 7.x.x the switch to ES6 modules has added additional challenges.
 
 The community is trying to rally to get the Joi package itself setup so that we can generate bundles directly from it, but until this is done, this package will allow you to build a bundled version.
 
