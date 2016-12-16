@@ -9,7 +9,7 @@
     "test": "karma start --single-run"
   },
   "author": "Jeff Barczewski",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "babelNotes": {
     "plugins": "Use loose mode for es2015-classes and proto-to-assign for IE < 11 compatibility. See https://github.com/jeffbski/joi-browser/issues/11"
   },
