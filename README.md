@@ -25,6 +25,23 @@ npm install joi-browser
 var Joi = require('joi-browser');
 ```
 
+Note: Joi uses the new ES6 features, Promise and Map, so you may need to add polyfills to use with older browsers.
+
+ - To see what browsers support Promise: http://caniuse.com/#search=PROMISE
+ - To check what browsers support Map: http://caniuse.com/#search=MAP
+
+Include the polyfill early in your code before requiring Joi. You can use the parts of `core-js` for the polyfill or use packages `es6-promise` + `es6-map`.
+
+npm install core-js or es6-promise and es6-map
+```bash
+npm install core-js
+```
+
+```js
+require('core-js/fn/map'); // sets up global Map
+require('core-js/fn/promise'); // sets up global Promise
+```
+
 Note: if you are using webpack with a babel loader you may need to exclude `joi-browser` from being run through babel again.
 
 In your webpack.config.js loaders, add an `exclude: [ /joi-browser/ ]`
