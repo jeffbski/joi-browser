@@ -46,6 +46,8 @@ module.exports = function karmaConfig(config) {
       },
       // most of the time we don't want this bloat
       node: {
+        global: true,
+        Buffer: true,
         crypto: 'empty',
         net: 'empty',
         dns: 'empty'

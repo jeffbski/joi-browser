@@ -40,4 +40,17 @@ describe('Joi', () => {
 
   });
 
+  describe('complex regex', () => {
+    let schema;
+
+    beforeEach(() => {
+      schema = Joi.string().regex(/^[^*;:"'`()@&,]+$/);
+    });
+
+    it('should validate', () => {
+      expect(schema.validate("Test*")).toBe(true);
+    });
+
+  });
+
 });
