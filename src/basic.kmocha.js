@@ -38,6 +38,18 @@ describe('Joi', () => {
       expect(result.error.toString()).toMatch('username');
     });
 
+    it('should show buffer works',() => {
+      const obj = {
+        // missing username
+        password: 'str!ng'
+      };
+      const result = Joi.validate(obj, Joi.object().keys({
+        password: Joi.string().regex(/^[a-zA-Z0-9]{3,30}$/),
+      }));
+      // check that error message
+      expect(result.error.toString()).toMatch('password');
+    });
+
   });
 
 });
