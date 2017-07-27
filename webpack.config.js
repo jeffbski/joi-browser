@@ -3,7 +3,7 @@
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/joi-browser.js',
+  entry: ['babel-polyfill','./src/joi-browser.js'],
   output: {
     library: 'Joi',
     libraryTarget: 'umd',
@@ -31,7 +31,6 @@ module.exports = {
   },
   node: {
     global: true,
-    Buffer: 'mock',
     crypto: 'empty',
     net: 'empty',
     dns: 'empty'
