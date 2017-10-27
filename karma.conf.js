@@ -38,10 +38,10 @@ module.exports = function karmaConfig(config) {
           {
             // need to babelify joi, isemail, hoek, and topo's lib
             test: /[\\\/]node_modules[\\\/](joi[\\\/]lib[\\\/]|isemail[\\\/]lib[\\\/]|hoek[\\\/]lib[\\\/]|topo[\\\/]lib[\\\/])/,
-            loader: 'babel'
+            loader: 'babel-loader'
           },
-          { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
-          { test: /\.json$/, loader: 'json-loader' }
+          {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
+          {test: /\.json$/, loader: 'json-loader'}
         ]
       },
       // most of the time we don't want this bloat
@@ -51,7 +51,7 @@ module.exports = function karmaConfig(config) {
         dns: 'empty'
       },
       resolve: {
-        extensions: ['', '.json', '.js']
+        extensions: ['.json', '.js']
       }
     },
 

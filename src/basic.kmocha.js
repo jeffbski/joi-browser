@@ -17,25 +17,75 @@ describe('Joi', () => {
       }).with('username', 'birthyear').without('password', 'access_token');
     });
 
-    it('should validate a valid object', () => {
+    it('should validate a valid object', (done) => {
+
       const obj = {
         username: 'abc',
+        email: 'foo@bar.com',
         birthyear: 1994
       };
-      const result = Joi.validate(obj, schema)
-      expect(result.error).toNotExist();
-      expect(result.value.username).toBe('abc');
-      expect(result.value.birthyear).toBe(1994);
+
+      schema.validate(obj, (err, value) => {
+
+        expect(err).toNotExist();
+        expect(value.username).toBe('abc');
+        expect(value.email).toBe('foo@bar.com');
+        expect(value.birthyear).toBe(1994);
+        done();
+      });
     });
 
     it('should error with missing username', () => {
+
       const obj = {
         // missing username
+        email: 'foo@bar.com',
         birthyear: 1994
       };
-      const result = Joi.validate(obj, schema)
-      // check that error message
-      expect(result.error.toString()).toMatch('username');
+
+      schema.validate(obj, (err, value) => {
+
+        expect(value.email).toBe('foo@bar.com');
+        expect(value.birthyear).toBe(1994);
+        // check that error message
+        expect(err.toString()).toMatch('username');
+      });
+    });
+
+    it('should error with invalid email', () => {
+
+      const obj = {
+        username: 'abc',
+        // invalid email
+        email: 'foobar.com',
+        birthyear: 1994
+      };
+
+      schema.validate(obj, (err, value) => {
+
+        expect(value.username).toBe('abc');
+        expect(value.birthyear).toBe(1994);
+        // check that error message
+        expect(err.toString()).toMatch('ValidationError: child "email" fails because ["email" must be a valid email]');
+      });
+    });
+
+    it('should error with invalid year', () => {
+
+      const obj = {
+        username: 'abc',
+        email: 'foo@bar.com',
+        // invalid year
+        birthyear: 2021
+      };
+
+      schema.validate(obj, (err, value) => {
+
+        expect(value.username).toBe('abc');
+        expect(value.email).toBe('foo@bar.com');
+        // check that error message
+        expect(err.toString()).toMatch('ValidationError: child "birthyear" fails because ["birthyear" must be less than or equal to 2013]');
+      });
     });
 
   });
