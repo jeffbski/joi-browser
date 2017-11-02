@@ -1,5 +1,12 @@
 // Karma configuration
 
+// for using ChromeHeadless
+process.env.CHROME_BIN = require('puppeteer').executablePath()
+
+
+// Note: If you want to use Phantom you will need to install
+// karma-phantomjs-launcher and karma-phantomjs-shim
+
 module.exports = function karmaConfig(config) {
   config.set({
 
@@ -9,7 +16,8 @@ module.exports = function karmaConfig(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha', 'phantomjs-shim'],
+    //frameworks: ['mocha', 'phantomjs-shim'],  // if using phantom
+    frameworks: ['mocha'], // for chrome
 
     // list of files / patterns to load in the browser
     files: [
@@ -90,8 +98,9 @@ module.exports = function karmaConfig(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
+    // browsers: ['PhantomJS'],
     // browsers: ['Chrome'],
+    browsers: ['ChromeHeadless'],
 
 
     // Continuous Integration mode
