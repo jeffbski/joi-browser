@@ -21,7 +21,7 @@ describe('Joi', () => {
 
       const obj = {
         username: 'abc',
-        email: 'foo@bar.com',
+        email: 'test@iana.org',
         birthyear: 1994
       };
 
@@ -29,7 +29,7 @@ describe('Joi', () => {
 
         expect(err).toNotExist();
         expect(value.username).toBe('abc');
-        expect(value.email).toBe('foo@bar.com');
+        expect(value.email).toBe('test@iana.org');
         expect(value.birthyear).toBe(1994);
         done();
       });
@@ -39,13 +39,13 @@ describe('Joi', () => {
 
       const obj = {
         // missing username
-        email: 'foo@bar.com',
+        email: 'test@iana.org',
         birthyear: 1994
       };
 
       schema.validate(obj, (err, value) => {
 
-        expect(value.email).toBe('foo@bar.com');
+        expect(value.email).toBe('test@iana.org');
         expect(value.birthyear).toBe(1994);
         // check that error message
         expect(err.toString()).toMatch('username');
@@ -74,7 +74,7 @@ describe('Joi', () => {
 
       const obj = {
         username: 'abc',
-        email: 'foo@bar.com',
+        email: 'test@iana.org',
         // invalid year
         birthyear: 2021
       };
@@ -82,7 +82,7 @@ describe('Joi', () => {
       schema.validate(obj, (err, value) => {
 
         expect(value.username).toBe('abc');
-        expect(value.email).toBe('foo@bar.com');
+        expect(value.email).toBe('test@iana.org');
         // check that error message
         expect(err.toString()).toMatch('ValidationError: child "birthyear" fails because ["birthyear" must be less than or equal to 2013]');
       });
