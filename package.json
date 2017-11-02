@@ -46,7 +46,7 @@
     "babel-preset-es2015": "^6.1.18",
     "core-js": "^2.4.1",
     "expect": "^1.20.2",
-    "joi": "^13.0.1",
+    "joi": "13.0.1",
     "json-loader": "^0.5.4",
     "karma": "^1.2.0",
     "karma-chrome-launcher": "^2.2.0",
