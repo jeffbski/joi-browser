@@ -16,7 +16,10 @@
   "babel": {
     "plugins": [
       "transform-es2015-modules-commonjs",
-      "transform-object-assign",
+      [
+        "transform-replace-object-assign",
+        "lodash.assign"
+      ],
       "transform-proto-to-assign",
       [
         "transform-es2015-classes",
@@ -43,6 +46,7 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.2.0",
     "babel-plugin-transform-object-assign": "^6.8.0",
     "babel-plugin-transform-proto-to-assign": "^6.9.0",
+    "babel-plugin-transform-replace-object-assign": "^0.2.1",
     "babel-preset-es2015": "^6.1.18",
     "core-js": "^2.4.1",
     "expect": "^1.20.2",
@@ -53,6 +57,7 @@
     "karma-mocha": "^1.1.1",
     "karma-mocha-reporter": "^2.1.0",
     "karma-webpack": "^2.0.5",
+    "lodash.assign": "^4.2.0",
     "mocha": "^3.2.0",
     "ngzip": "^1.1.3",
     "ntee": "^1.1.4",
