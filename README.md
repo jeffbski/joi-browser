@@ -83,10 +83,19 @@ npm install joi
 
 Add the following to your app's webpack.config.js to alias joi to joi-browser
 
+for Webpack 1:
 ```javascript
   resolve: {
     alias: {
       joi: 'joi-browser'
+  }
+```
+
+for webpack 2+:
+```javascript
+  resolve: {
+    alias: {
+      joi: require.resolve('joi-browser')
   }
 ```
 
