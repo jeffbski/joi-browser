@@ -1,6 +1,6 @@
 {
   "name": "joi-browser",
-  "version": "13.3.0",
+  "version": "13.4.0",
   "description": "joi object schema validation bundled for the browser",
   "main": "./dist/joi-browser.js",
   "scripts": {
