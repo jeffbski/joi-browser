@@ -1,4 +1,6 @@
-# joi-browser
+# joi-browser (deprecated)
+
+Deprecation Notice: @hapi/joi@16.0.0 now has direct browser support.
 
 joi object schema validation bundled for the browser (babelified and bundled)
 
